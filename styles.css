@@ -1,0 +1,117 @@
+#root {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 420px;
+  box-shadow: 0px 0px 20px -3px rgba(0, 0, 0, 0.75);
+  margin: 10px auto;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.mainUL {
+  padding: 10px 40px;
+}
+
+ul>li>ul {
+  display: none;
+}
+
+ul>li.open>ul {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  position: relative;
+  margin: 7px;
+  font-size: 15px;
+  background-color: rgb(233, 233, 233);
+  z-index: -1;
+}
+
+span {
+  display: inline-block;
+  width: 100%;
+  font-size: 25px;
+  border-radius: 5px;
+}
+
+span.folder::before {
+  font-family: 'Material Icons';
+  content: "folder";
+  margin-right: -10px;
+  color: rgb(235, 203, 97);
+  vertical-align: middle;
+}
+
+span.open.folder::before {
+  font-family: 'Material Icons';
+  content: "folder_open";
+  color: rgb(235, 203, 97);
+}
+
+span.file::before {
+  font-family: 'Material Icons';
+  content: "insert_drive_file";
+  color: rgb(167, 176, 185);
+  font-size: 25px;
+  margin-right: -10px;
+  vertical-align: middle;
+}
+
+.empty {
+  font-style: italic;
+  font-size: 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+span:hover {
+  background-color: rgba(78, 225, 230, 0.2);
+  cursor: pointer;
+}
+
+.hoverEfect {
+  background-color: rgba(78, 225, 230, 0.4);
+  cursor: pointer;
+}
+
+input {
+  background-color: #fff;
+  border-color: transparent;
+  font-size: 15px;
+  color: black;
+  margin: 7px;
+}
+
+.rightMenu {
+  display: none;
+  position: fixed;
+  margin: 0;
+  padding: 15px;
+  line-height: 30px;
+  font-size: 17px;
+  background-color: rgb(245, 245, 245);
+  box-shadow: 5px 5px 18px -3px rgba(0, 0, 0, 0.75);
+  list-style: none;
+  font-family: 'Times New Roman', Times, serif;
+  cursor: default;
+  color: grey;
+}
+
+.active {
+  display: block;
+}
+
+.enabled {
+  color: black;
+}
+
+.enabled>li {
+  cursor: pointer;
+}
+
+.enabled>li:hover {
+  background-color: rgba(78, 225, 230, 0.2);
+}
